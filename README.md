@@ -16,6 +16,8 @@ ogr2info -al -so target.shp
 
 **Conversions:**  
 
+converts into **lat** and **lng** GeoJSON formats
+
 ```sh
  ogr2ogr -f "GeoJSON" output.json \ 
     -s_srs 'EPSG:4326' \ 
