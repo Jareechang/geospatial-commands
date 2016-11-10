@@ -33,6 +33,8 @@ Converts into `lat` and `lng` **GeoJSON** formats
 
 Convert into **topojson**:
 
+*recommended conversions if using D3 to visualize map data*
+
 ```sh
 mkdir output && \
     ogr2ogr -f "GeoJSON" output.geo.json target.shp && \
