@@ -14,6 +14,12 @@ Overview of file formats, data type of shapefile
 ogr2info -al -so target.shp
 ```
 
+Display all the data in shapefile
+
+```sh
+ogr2info -al target.shp
+```
+
 **Conversions:**  
 
 converts into **lat** and **lng** GeoJSON formats
