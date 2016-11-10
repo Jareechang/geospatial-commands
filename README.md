@@ -22,13 +22,22 @@ ogr2info -al target.shp
 
 **Conversions:**  
 
-converts into **lat** and **lng** GeoJSON formats
+Converts into `lat` and `lng` **GeoJSON** formats
 
 ```sh
  ogr2ogr -f "GeoJSON" output.json \ 
     -s_srs 'EPSG:4326' \ 
     -t_srs 'EPSG:3081' \
     input.shp 
+```
+
+Convert into **topojson**:
+
+```sh
+mkdir output && \
+    ogr2ogr -f "GeoJSON" output.geo.json target.shp && \
+    geo2topo --out output/output.topo.json output/ouput.geo.json
+
 ```
 
 
