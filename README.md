@@ -20,6 +20,13 @@ Display all the data in shapefile
 ogr2info -al target.shp
 ```
 
+Omit geometric details
+```sh
+ogrinfo -sql 'query' \
+    -geom={yes,no, summary}    
+
+```
+
 **Conversions:**  
 
 Converts into `lat` and `lng` **GeoJSON** formats
